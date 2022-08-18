@@ -1,2 +1,2 @@
 # ratel-.net-client
-win32 the lightest client !
+ratel win32 the lightest client !
