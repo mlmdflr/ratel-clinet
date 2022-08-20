@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ratel-.net-client", "ratel-.net-client.csproj", "{A9CF76C1-E4B3-4BB7-B2EF-25D4F6F365BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9CF76C1-E4B3-4BB7-B2EF-25D4F6F365BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9CF76C1-E4B3-4BB7-B2EF-25D4F6F365BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9CF76C1-E4B3-4BB7-B2EF-25D4F6F365BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9CF76C1-E4B3-4BB7-B2EF-25D4F6F365BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE472D91-F786-4E44-BDC0-B581AA1C66DF}
+	EndGlobalSection
+EndGlobal
