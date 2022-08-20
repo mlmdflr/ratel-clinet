@@ -46,7 +46,7 @@ namespace ratel_.net_client
 
         public static uint Uint32(byte[] b)
         {
-            _ = b[3]; // bounds check hint to compiler; see golang.org/issue/14808
+            _ = b[3];
             return (b[3]) | (uint)(b[2]) << 8 | (uint)(b[1]) << 16 | (uint)(b[0]) << 24;
         }
 
