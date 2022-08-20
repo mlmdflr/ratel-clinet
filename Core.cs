@@ -84,7 +84,7 @@ namespace ratel_.net_client
                 var line = Tool.Readline();
                 if (!@is) continue;
                 if (!"e".Equals(line.ToLower()) && !"exit".Equals(line.ToLower()))
-                    Console.Write($"{Consts.cleanLine}[{nickName}@ratel ~]# ");
+                    Console.Write($"{Consts.cleanLine}[{nickName}@ratel ~] ");
                 client.Send(Tool.Encode(new Packet()
                 {
                     Body = Encoding.ASCII.GetBytes(line)
