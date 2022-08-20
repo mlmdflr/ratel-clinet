@@ -6,3 +6,4 @@ ratel win32 the lightest client !
 
 ## Windows System Support
 > Windows Version >= Windows Vista
+> Windows XP Installation required .net framework 2.0
