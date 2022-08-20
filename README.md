@@ -1,4 +1,4 @@
-# ratel-.net-client
+# ratel-dotnet-clinet
 ratel win32 the lightest client !
 
 ## Framework
