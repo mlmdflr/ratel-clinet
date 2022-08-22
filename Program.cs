@@ -26,7 +26,7 @@ namespace ratel_clinet
                 if (string.Empty.Equals(nickName)) goto home;
                 break;
             }
-            Core.StartClient(ip, port, nickName);
+            new Core().StartClient(ip, port, nickName);
 
         }
     }

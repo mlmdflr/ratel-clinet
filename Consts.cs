@@ -11,6 +11,6 @@
 
         public const string IsStop = "INTERACTIVE_SIGNAL_STOP";
 
-        public const string cleanLine = "\r\r";
+        public const string cleanLine = "\r\r                                                                                              \r\r";
     }
 }

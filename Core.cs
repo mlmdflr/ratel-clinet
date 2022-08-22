@@ -10,13 +10,14 @@ namespace ratel_clinet
     internal class Core
     {
 
-        public static bool @is;
+        public bool @is;
 
-        public static Socket client = null;
+        public Socket client = null;
 
-        public static string nickName = string.Empty;
+        public string nickName = string.Empty;
 
-        public static void StartClient(string ip, int port, string nk)
+
+        public void StartClient(string ip, int port, string nk)
         {
             try
             {
@@ -61,48 +62,56 @@ namespace ratel_clinet
             }
         }
 
-        public static void ServerListener()
+        public void ServerListener()
         {
             if (client == null) throw new Exception("client uninitialized");
             while (true)
             {
             input:
                 var pk = Tool.Decode(client);
-
                 string data = Encoding.UTF8.GetString(pk.Body, 0, pk.Body.Length);
-                if (data == Consts.IsStart)
+                if (Consts.IsStart.Equals(data))
                 {
-                    if (!@is) Console.Write($"{Consts.cleanLine}[{nickName}@ratel ~]# ");
+                    if (!@is) Write($"{Consts.cleanLine}[{nickName}@ratel ~]# ");
                     @is = true;
                     goto input;
                 }
-                else if (data == Consts.IsStop)
+                else if (Consts.IsStop.Equals(data))
                 {
-                    if (@is) Console.Write(Consts.cleanLine);
+                    if (@is) Write(Consts.cleanLine);
                     @is = false;
                     goto input;
                 }
-                if (@is) Console.Write($"{Consts.cleanLine}{data}{Consts.cleanLine}[{nickName}@ratel ~]# ");
-                else Console.Write(data);
+                if (@is) Write($"{Consts.cleanLine}{data}{Consts.cleanLine}[{nickName}@ratel ~]# ");
+                else Write(data);
             }
         }
 
-        public static void ConsoleListener()
+        public void ConsoleListener()
         {
             if (client == null) throw new Exception("client uninitialized");
             while (true)
             {
             input:
                 var line = Tool.Readline();
-                if (!@is)
+                if (!@is || string.Empty.Equals(line))
                 {
-                    Console.Write($"{Consts.cleanLine}[{nickName}@ratel ~]# ");
+                    Write($"{Consts.cleanLine}[{nickName}@ratel ~]# ");
                     goto input;
                 };
                 client.Send(Tool.Encode(new Packet()
                 {
                     Body = Encoding.UTF8.GetBytes(line)
                 }));
+            }
+        }
+
+
+        public void Write(string str)
+        {
+            lock (this)
+            {
+                Console.Write(str);
             }
         }
 
