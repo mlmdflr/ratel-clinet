@@ -6,7 +6,7 @@
         public string Name { get; set; }
         public int Score
         {
-            get { return 9999; }
+            get { return 99999; }
             internal set { }
         }
     }

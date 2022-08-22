@@ -20,7 +20,15 @@ namespace ratel_.net_client
         {
             try
             {
-                IPAddress ipAddress = IPAddress.Parse(ip);
+                IPAddress ipAddress;
+                try
+                {
+                    ipAddress = IPAddress.Parse(ip);
+                }
+                catch (Exception)
+                {
+                    ipAddress = Dns.GetHostAddresses(ip)[0];
+                }
 
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
 
@@ -46,10 +54,10 @@ namespace ratel_.net_client
                 new Thread(() => ConsoleListener()).Start();
                 ServerListener();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                client.Shutdown(SocketShutdown.Both);
-                client.Close();
+                Console.WriteLine($"[error] >>> {ip}:{port}: " + e.Message);
+                Environment.Exit(0);
             }
         }
 
@@ -58,9 +66,9 @@ namespace ratel_.net_client
             if (client == null) throw new Exception("client uninitialized");
             while (true)
             {
-                input:
+            input:
                 var pk = Tool.Decode(client);
-             
+
                 string data = Encoding.UTF8.GetString(pk.Body, 0, pk.Body.Length);
                 if (data == Consts.IsStart)
                 {

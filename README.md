@@ -2,10 +2,13 @@
 ratel win32 the lightest client !
 
 ## Custom Server
-```c#
+```
 .\ratel-client.exe --ip=127.0.0.1 --p=9999
 or
 .\ratel-client.exe --ip=mlmdflr.cc --port=9999
+of
+.\ratel-client.exe --dn=mlmdflr.cc -help 
+# -h of -help   open the rules page in the default browser
 ```
 >default is ratel official services
 
