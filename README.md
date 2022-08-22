@@ -1,4 +1,4 @@
-# ratel-dotnet-client
+# ratel-clinet
 ratel win32 the lightest client !
 
 ## Custom Server
