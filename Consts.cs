@@ -1,4 +1,4 @@
-﻿namespace ratel_.net_client
+﻿namespace ratel_clinet
 {
     internal class Consts
     {

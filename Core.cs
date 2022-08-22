@@ -5,7 +5,7 @@ using System.Text;
 using System.Net.Sockets;
 using System.Threading;
 
-namespace ratel_.net_client
+namespace ratel_clinet
 {
     internal class Core
     {

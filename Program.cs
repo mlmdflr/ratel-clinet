@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ratel_.net_client
+namespace ratel_clinet
 {
     internal class Program
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Sockets;
 
-namespace ratel_.net_client
+namespace ratel_clinet
 {
     internal class Tool
     {

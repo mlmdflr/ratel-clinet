@@ -6,14 +6,14 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{44B9E1B6-BACA-4311-8A7A-14C67FF75E11}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ratel_dotnet_clinet</RootNamespace>
-    <AssemblyName>ratel-dotnet-clinet</AssemblyName>
+    <RootNamespace>ratel_clinet</RootNamespace>
+    <AssemblyName>ratel-clinet</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
