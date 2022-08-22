@@ -10,7 +10,6 @@
             internal set { }
         }
     }
-
     internal class Packet
     {
         public const int MaxPacketSize = 65536;

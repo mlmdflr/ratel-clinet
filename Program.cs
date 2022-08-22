@@ -22,7 +22,7 @@ namespace ratel_clinet
             Console.Write("Nickname: ");
             while (true)
             {
-                nickName = Tool.Readline();
+                nickName = Console.ReadLine();
                 if (string.Empty.Equals(nickName)) goto home;
                 break;
             }

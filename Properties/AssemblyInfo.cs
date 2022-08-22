@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("ratel-dotnet-clinet")]
+[assembly: AssemblyTitle("ratel-clinet")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ratel-dotnet-clinet")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyProduct("ratel-clinet")]
+[assembly: AssemblyCopyright("Copyright ©  2022 mlmdflr")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
